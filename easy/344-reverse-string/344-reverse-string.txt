@@ -1,0 +1,13 @@
+class Solution {
+    public void reverseString(char[] s) {
+        //store the solution
+        char[] solution = new char[s.length];
+        for(int i = 0; i < s.length; i++) {
+            solution[s.length - 1 - i] = s[i];
+        }
+        //set s to be in the same order as the solution
+        for(int i = 0; i < s.length; i++) {
+            s[i] = solution[i];
+        }
+    }
+}
