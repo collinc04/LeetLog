@@ -1,0 +1,13 @@
+import java.util.Stack;
+class MinStack {
+    public class stackNode {
+        public int val;
+        public stackNode prevNode;
+        public stackNode (int val, stackNode prevNode) {
+            this.val = val;
+            this.prevNode = prevNode;
+        }
+    }
+    int size;
+    Stack<Integer> min = new Stack<>();
+    public stackNode topNode;
