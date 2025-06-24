@@ -1,0 +1,18 @@
+class Solution {
+    public int[] plusOne(int[] digits) {
+        if(digits[digits.length - 1] < 9) {
+            //if the last digit is les than 9 add 1
+            digits[digits.length - 1] ++;
+        } else {
+            //create a solution with length + 1 in order to deal with the edge case of all 9's
+            int[] solution = new int[digits.length + 1];
+            //copy the contents of digits into solution 1 position back
+            for (int i = digits.length; i > 0; i--){
+                solution[i] = digits[i - 1];
+            }
+            //go backwards
+            int j = solution.length - 1;
+            //roll over each 9
+            while(solution[j] == 9) {
+                solution[j] = 0;
+                j--;
