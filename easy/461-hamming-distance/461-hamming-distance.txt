@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int hammingDistance(int x, int y) {
+        int solution = x ^ y; //XOR
+        std::string binaryString = std::bitset<32>(solution).to_string(); 
+        std::cout << binaryString << std::endl;
+        solution = 0;
+        for(int i = 0; i < binaryString.length(); i++) {
+            if(binaryString[i] == '1') {
+                solution ++;
+            }
+        }
+        return solution;
+    }
+};
