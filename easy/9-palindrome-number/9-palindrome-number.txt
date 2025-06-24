@@ -1,0 +1,16 @@
+#include <string>
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        //to string to make accessing individual characters viable
+        //for two pointer solution
+        std::string solution = std::to_string(x);
+        //used as our second pointer, i is the first
+        int j = solution.length() - 1;
+        for (int i = 0; i < solution.length() / 2; i ++) {
+            //check that string[i] is equal to string[j]
+            if (solution[i] != solution[j]) {
+                return false;
+            }
+            j --;
+        }
