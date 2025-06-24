@@ -1,0 +1,13 @@
+        if(!solver.empty()){
+            return false;
+        }
+        return true;
+    }
+};
+/*
+    Had a bit of a rough time keeping track of everything in the if statement
+    and I feel like there is a better way to keep track of all of those conditions,
+    I think if I re-do this problem I would use a helper method to make it a lot more
+    legible. I also feel like there is probably something I could do to reduce the lines
+    of code in this solution
+*/
